@@ -1,11 +1,14 @@
 node {
-   stage('SCM') {
-      	 https://github.com/rbclokesh/game-of-life.git
+   stage('SCM') 
+	{
+      	 git https://github.com/rbclokesh/game-of-life.git
    	}
-      stage ('build the packages') {
+   stage('build the packages') 
+	{
 	  sh 'mvn clean package'
    	}  
-   stage ('archival') {
+   stage('archival') 
+	{
 	 archive 'target/*.jar'
 	}
 }
