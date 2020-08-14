@@ -10,5 +10,9 @@ node {
 			         // mvn package
 				 	  sh 'mvn package'
 					     }
+					     stage('arch'){
+						//artifactory
+						archive 'gameoflife-web/target/*.war'
+					     }
 					         
 						 }
