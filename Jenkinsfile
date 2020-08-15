@@ -13,7 +13,9 @@ node {
     stage('arch'){
 	//artifactory
 	  archive 'gameoflife-web/target/*.war'
-	  reports 'gameoflife-web/*.xml'
-	     }
-	         
- }
+		}
+	stage('reports'){
+       //reports
+       reports 'gameoflife-web/*.xml'
+	}		
+}
